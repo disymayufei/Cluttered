@@ -283,7 +283,7 @@ public class ClutteredFurnitureUpdater {
         UPDATED_BLOCK_MAP.put("luphie_cardboard_box_closed", BlockRegistration.CARDBOARD_BOX.get());
         UPDATED_BLOCK_MAP.put("luphie_cardboard_box_filled", BlockRegistration.CARDBOARD_BOX.get());
         UPDATED_BLOCK_MAP.put("luphie_cardboard_box_open", BlockRegistration.CARDBOARD_BOX.get());
-        UPDATED_BLOCK_MAP.put("luphie_cauldron_poster", BlockRegistration.CARDBOARD_BOX.get());
+        UPDATED_BLOCK_MAP.put("luphie_cauldron_poster", BlockRegistration.CAULDRON_POSTER.get());
         UPDATED_BLOCK_MAP.put("luphie_classic_mini_table", BlockRegistration.ANTIQUE_MINI_TABLE.get());
         UPDATED_BLOCK_MAP.put("luphie_classic_radio", BlockRegistration.TRADITIONAL_RADIO.get());
         UPDATED_BLOCK_MAP.put("luphie_cluttered_seltzer_cans", BlockRegistration.SELTZER_CANS.get());

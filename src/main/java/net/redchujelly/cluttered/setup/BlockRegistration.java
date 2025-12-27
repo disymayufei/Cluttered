@@ -69,7 +69,7 @@ public class BlockRegistration {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).mapColor(DyeColor.PURPLE),
             BlockSetType.OAK), 300);
     public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PURPLE)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PURPLE)));
     public static final RegistryObject<Block> WILLOW_VINES = registerBlock("willow_vines",
             () -> new WillowVinesBlock(BlockBehaviour.Properties.copy(Blocks.VINE).mapColor(DyeColor.PURPLE)));
     public static final RegistryObject<Block> WILLOW_SAPLING = registerFuelBlock("willow_sapling",
@@ -133,7 +133,7 @@ public class BlockRegistration {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).mapColor(DyeColor.PURPLE),
                     BlockSetType.OAK), 300);
     public static final RegistryObject<Block> FLOWERING_WILLOW_LEAVES = registerBlock("flowering_willow_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PURPLE)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PURPLE)));
     public static final RegistryObject<Block> FLOWERING_WILLOW_WINDOW = registerBlock("flowering_willow_window",
             () -> new CustomGlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).mapColor(DyeColor.PURPLE).noOcclusion()));
     public static final RegistryObject<Block> FLOWERING_WILLOW_WINDOW_PANE = registerBlock("flowering_willow_window_pane",
@@ -185,7 +185,7 @@ public class BlockRegistration {
     public static final RegistryObject<Block> POPLAR_WINDOW_PANE = registerBlock("poplar_window_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).mapColor(DyeColor.YELLOW).noOcclusion()));
     public static final RegistryObject<Block> POPLAR_LEAVES = registerBlock("poplar_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.YELLOW)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.YELLOW)));
     public static final RegistryObject<Block> POPLAR_SAPLING = registerFuelBlock("poplar_sapling",
             () -> new SaplingBlock(new PoplarTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).mapColor(DyeColor.YELLOW)), 100);
     public static final RegistryObject<Block> POTTED_POPLAR_SAPLING = BLOCKS.register("potted_poplar_sapling",
@@ -239,7 +239,7 @@ public class BlockRegistration {
     public static final RegistryObject<Block> FLOWERING_POPLAR_WINDOW_PANE = registerBlock("flowering_poplar_window_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).mapColor(DyeColor.PINK).noOcclusion()));
     public static final RegistryObject<Block> FLOWERING_POPLAR_LEAVES = registerBlock("flowering_poplar_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PINK)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PINK)));
 
     public static final RegistryObject<Block> FLOWERING_POPLAR_SIGN = BLOCKS.register("flowering_poplar_sign",
             () -> new CustomStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN).mapColor(DyeColor.YELLOW), ClutteredWoodTypes.FLOWERING_POPLAR));
@@ -287,7 +287,7 @@ public class BlockRegistration {
     public static final RegistryObject<Block> CRABAPPLE_WINDOW_PANE = registerBlock("crabapple_window_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).mapColor(DyeColor.PINK).noOcclusion()));
     public static final RegistryObject<Block> CRABAPPLE_LEAVES = registerBlock("crabapple_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PINK)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PINK)));
     public static final RegistryObject<Block> CRABAPPLE_SAPLING = registerFuelBlock("crabapple_sapling",
             () -> new SaplingBlock(new CrabappleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).mapColor(DyeColor.PINK)), 100);
     public static final RegistryObject<Block> POTTED_CRABAPPLE_SAPLING = BLOCKS.register("potted_crabapple_sapling",
@@ -334,7 +334,7 @@ public class BlockRegistration {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).mapColor(DyeColor.PINK),
                     BlockSetType.OAK), 300);
     public static final RegistryObject<Block> FLOWERING_CRABAPPLE_LEAVES = registerBlock("flowering_crabapple_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PINK)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.PINK)));
     public static final RegistryObject<Block> FLOWERING_CRABAPPLE_BOOKSHELF = registerFuelBlock("flowering_crabapple_bookshelf",
             () -> new CustomWoodBlock(BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).mapColor(DyeColor.PINK)), 300);
     public static final RegistryObject<Block> FLOWERING_CRABAPPLE_WINDOW = registerBlock("flowering_crabapple_window",
@@ -389,7 +389,7 @@ public class BlockRegistration {
     public static final RegistryObject<Block> SYCAMORE_WINDOW_PANE = registerBlock("sycamore_window_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).mapColor(DyeColor.GREEN).noOcclusion()));
     public static final RegistryObject<Block> SYCAMORE_LEAVES = registerBlock("sycamore_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.GREEN)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.GREEN)));
     public static final RegistryObject<Block> SYCAMORE_SAPLING = registerFuelBlock("sycamore_sapling",
             () -> new SaplingBlock(new SycamoreTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).mapColor(DyeColor.GREEN)), 100);
     public static final RegistryObject<Block> POTTED_SYCAMORE_SAPLING = BLOCKS.register("potted_sycamore_sapling",
@@ -442,9 +442,9 @@ public class BlockRegistration {
     public static final RegistryObject<Block> MAPLE_WINDOW_PANE = registerBlock("fluorescent_maple_window_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).mapColor(DyeColor.CYAN).lightLevel(p -> 4).noOcclusion()));
     public static final RegistryObject<Block> MAPLE_LEAVES = registerBlock("fluorescent_maple_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.CYAN).lightLevel(p -> 4)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.CYAN).lightLevel(p -> 4)));
     public static final RegistryObject<Block> MAPLE_LEAVES_FLOWERING = registerBlock("flowering_fluorescent_maple_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.CYAN).lightLevel(p -> 12)));
+            () -> new CustomLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).mapColor(DyeColor.CYAN).lightLevel(p -> 12)));
     public static final RegistryObject<Block> MAPLE_SAPLING = registerFuelBlock("fluorescent_maple_sapling",
             () -> new SaplingBlock(new MapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).lightLevel(p -> 6).mapColor(DyeColor.CYAN)), 100);
     public static final RegistryObject<Block> POTTED_MAPLE_SAPLING = BLOCKS.register("potted_fluorescent_maple_sapling",

@@ -3,12 +3,20 @@ package net.redchujelly.cluttered.datagen.loot;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.redchujelly.cluttered.block.multiblock.MultiblockPlacer;
 import net.redchujelly.cluttered.setup.BlockRegistration;
@@ -285,7 +293,7 @@ public class ClutteredBlockLootTables extends BlockLootSubProvider {
         dropSelf(BlockRegistration.BLUE_MUSHROOM_LOG.get());
         dropSelf(BlockRegistration.BLUE_MUSHROOM_WOOD.get());
         dropSelf(BlockRegistration.BLUE_MUSHROOM_PLANKS.get());
-        dropSelf(BlockRegistration.BLUE_MUSHROOM_CAP.get());
+        this.add(BlockRegistration.BLUE_MUSHROOM_CAP.get(), (p_250428_) -> createSilkTouchDispatchTable(p_250428_, this.applyExplosionCondition(p_250428_, (LootItem.lootTableItem(BlockRegistration.BLUE_MUSHROOM_SAPLING.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, new float[]{0.1F, 0.14285715F, 0.25F, 1.0F}))).otherwise(LootItem.lootTableItem(p_250428_)))));
         dropSelf(BlockRegistration.BLUE_MUSHROOM_STAIRS.get());
         dropSelf(BlockRegistration.BLUE_MUSHROOM_FENCE.get());
         dropSelf(BlockRegistration.BLUE_MUSHROOM_FENCE_GATE.get());
@@ -315,7 +323,7 @@ public class ClutteredBlockLootTables extends BlockLootSubProvider {
         dropSelf(BlockRegistration.RED_MUSHROOM_LOG.get());
         dropSelf(BlockRegistration.RED_MUSHROOM_WOOD.get());
         dropSelf(BlockRegistration.RED_MUSHROOM_PLANKS.get());
-        dropSelf(BlockRegistration.RED_MUSHROOM_CAP.get());
+        this.add(BlockRegistration.RED_MUSHROOM_CAP.get(), (p_250428_) -> createSilkTouchDispatchTable(p_250428_, this.applyExplosionCondition(p_250428_, (LootItem.lootTableItem(BlockRegistration.RED_MUSHROOM_SAPLING.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, new float[]{0.1F, 0.14285715F, 0.25F, 1.0F}))).otherwise(LootItem.lootTableItem(p_250428_)))));
         dropSelf(BlockRegistration.RED_MUSHROOM_STAIRS.get());
         dropSelf(BlockRegistration.RED_MUSHROOM_FENCE.get());
         dropSelf(BlockRegistration.RED_MUSHROOM_FENCE_GATE.get());
@@ -1209,7 +1217,7 @@ public class ClutteredBlockLootTables extends BlockLootSubProvider {
         multiBlockDropOnlyOneItem(BlockRegistration.WEDDING_ARCH.get());
 
         //PASTEL SET
-        multiBlockDropOnlyOneItem(BlockRegistration.WOODEN_BLOCK_BOOKSHELF_PASTEL.get());
+        dropSelf(BlockRegistration.WOODEN_BLOCK_BOOKSHELF_PASTEL.get());
         multiBlockDropOnlyOneItem(BlockRegistration.PASTEL_BED.get());
         multiBlockDropOnlyOneItem(BlockRegistration.PASTEL_TABLE.get());
         multiBlockDropOnlyOneItem(BlockRegistration.PASTEL_WARDROBE.get());
